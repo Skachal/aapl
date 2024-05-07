@@ -1,0 +1,27 @@
+.countdown-unit {
+            display: inline-block;
+            margin: 0 5px;
+            font-size: 24px;
+            position: relative;
+        }
+        
+        .countdown-circle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            border: 4px solid #007bff;
+            border-radius: 50%;
+            animation: countdown-animation 1s linear infinite;
+        }
+
+        @keyframes countdown-animation {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
