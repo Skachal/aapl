@@ -13,14 +13,12 @@ body{
     gap: 10px;
 }
 .bg-mask {
-    background: url('/img/1674271546_catherineasquithgallery-com-p-fon-vizitki-serii-foto-120.jpg') no-repeat;
+    background: url('./img/1674271546_catherineasquithgallery-com-p-fon-vizitki-serii-foto-120.jpg') no-repeat;
     position: fixed;
-    width: 1800px;
-    height: 700px;
+    width: 100%;
+    height: 100%;
     z-index: -1;
     top: 0;
-padding: 0;
-margin: 0;
 }
 .countdown-item {
     display: flex;
@@ -52,4 +50,37 @@ margin: 0;
 .dresscode {
     margin-top: 50px;
     text-align: center;
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Стили для планшетов */
+    .bg-mask {
+        display: block;
+        background: url('./img/1674271546_catherineasquithgallery-com-p-fon-vizitki-serii-foto-120.jpg') no-repeat;
+        position: fixed;
+        width: 100%; /* Ширина будет равна ширине экрана */
+        height: 100%; /* Высота будет равна высоте видимой части экрана */
+        z-index: -1;
+        top: 0;
+        left: 0;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    /* Для экранов шириной до 767px (обычно это мобильные устройства) */
+    .bg-mask {
+        display: block; /* Показываем фон */
+        background: url('./img/1674271546_catherineasquithgallery-com-p-fon-vizitki-serii-foto-120.jpg') no-repeat;
+        position: fixed;
+        width: 100%; /* Ширина будет равна ширине экрана */
+        height: 100%; /* Высота будет равна высоте видимой части экрана */
+        z-index: -1;
+        top: 0;
+        left: 0;
+        padding: 0;
+        margin: 0;
+    }
 }
