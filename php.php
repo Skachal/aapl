@@ -1,27 +1,31 @@
 <?php
 // Проверяем, была ли отправлена форма
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Проверяем, есть ли данные имени и фамилии в запросе
-    if (isset($_POST["RsvpForm"]["name"]) && isset($_POST["RsvpForm"]["willbe"])) {
+    // Получаем сырые данные из тела запроса
+    $rawData = file_get_contents("php://input");
+    // Декодируем JSON-данные
+    $data = json_decode($rawData, true);
+
+    if (isset($data["name"]) && isset($data["willbe"])) {
         // Получаем имя и фамилию пользователя и их выбор
-        $name = $_POST["RsvpForm"]["name"];
-        $willAttend = ($_POST["RsvpForm"]["willbe"] === "yes") ? true : false;
+        $name = $data["name"];
+        $willAttend = ($data["willbe"][1] === "yes") ? true : false;
 
         // Сохраняем данные в файл, базу данных или другое хранилище
         // В этом примере мы просто добавим данные в текстовый файл
-        $data = "$name, $willAttend\n";
+        $dataToSave = "$name, $willAttend\n";
         $file = fopen("rsvp_data.txt", "a"); // Открываем файл для добавления данных
-        fwrite($file, $data); // Записываем данные
+        fwrite($file, $dataToSave); // Записываем данные
         fclose($file); // Закрываем файл
 
         // Возвращаем пользователю сообщение об успешной отправке формы
-        echo "Данные успешно отправлены!";
+        echo json_encode(["status" => "success", "message" => "Данные успешно отправлены!"]);
     } else {
         // Если данные не были отправлены, возвращаем ошибку
-        echo "Ошибка: Не удалось обработать данные формы.";
+        echo json_encode(["status" => "error", "message" => "Ошибка: Не удалось обработать данные формы."]);
     }
 } else {
     // Если запрос не был POST, возвращаем ошибку
-    echo "Ошибка: Недопустимый метод запроса.";
+    echo json_encode(["status" => "error", "message" => "Ошибка: Недопустимый метод запроса."]);
 }
 ?>

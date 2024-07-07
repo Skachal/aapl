@@ -25,7 +25,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #303030;
+    background-color: #ffffff;
     border-radius: 8px;
     padding: 10px;
     width: 80px;
@@ -84,3 +84,177 @@ body{
         margin: 0;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.modal-content img {
+    display: block;
+    max-width: 100%;
+    width: 300px; /* Adjust the width as needed */
+    margin: 0 auto 15px; /* Center the image and add some bottom margin */
+}
+        body {
+            margin: auto;
+            text-align: center;
+            color: #ffffff;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #000000;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        .home-logo {
+            margin: auto;
+            padding: 20px 0;
+        }
+        .home-logo p {
+            font-size: 2rem;
+            font-weight: 300;
+        }
+        .home-logo h2 {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: #ffffff;
+        }
+        .bg-mask {
+            display: none;
+        }
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            gap: 10px;
+            color: #000000;
+        }
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            width: 60px;
+            height: 60px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .countdown-unit {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .countdown-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: #000000;
+        }
+        .dorogoi-gost {
+            margin-top: 30px;
+            padding: 0 20px;
+            color: #ffffff;
+        }
+        .dorogoi-gost h2 {
+            font-size: 1.5rem;
+        }
+        .dorogoi-gost p {
+            font-size: 1rem;
+            font-weight: 300;
+        }
+        .dresscode {
+            margin-top: 50px;
+            text-align: center;
+        }
+        .dresscode h2 {
+            font-size: 1.5rem;
+            color: #ffffff;
+        }
+        .dresscode p {
+            font-size: 1rem;
+            color: #ffffff;
+        }
+        .dresscode img {
+            border-radius: 50%;
+            margin: 10px;
+        }
+        form {
+            margin-top: 50px;
+            padding: 0 20px;
+        }
+        form h2 {
+            font-size: 1.5rem;
+            color: #ffffff;
+        }
+        form label {
+            font-size: 1rem;
+            color: #ffffff;
+        }
+        form input, form button {
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .close {
+            color: #ffffff;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .cute-message {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ff69b4;
+        }
+        .error-message {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ff0000;
+        }
+        .decline-message {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #424970;
+        }
